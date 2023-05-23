@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-elemento</title>
+
+    <!-- 
+
+         # = id
+         . = class
+         : = pseudo-class (são eventos que pode ser usado tipo o evento mouse)
+         :: = Pseudo-elemento (adicionar mais config nas tags como adicionar simbolos e entre outros)
+
+
+
+     -->
+
+    <style>
+
+        a {
+            text-decoration: none; /* retira o sublinhado */
+            color: rgb(8, 88, 104);
+        }
+        a#dois {
+            text-decoration: none;
+            color: rgb(38, 116, 12);
+        }
+
+        a::after {
+
+            content: '  [ link ]'; /* adiciona simbolo e contéudo */
+            color: blue;
+        }
+
+        a#dois::after {
+
+            content: '';
+
+        }
+        a#dois::before {
+
+            content: '➪ SIMBOLO HTML5 ☞';
+            color: rgb(235, 75, 16);
+
+        }
+
+        a:visited {color: blueviolet;} /* link visitado */
+
+        a:hover {color: rgb(142, 135, 6); /* evento mouse */
+        
+        }
+
+        a:active {color: rgb(149, 16, 91);} /* evento segurando o clique do mouse */
+
+
+        h3 {
+            color: rgb(244, 70, 7);
+        }
+
+        h3::after { /* after é uma Pseudo-elemento ele adiciona coisas depois de um conteúdo de uma tag */
+            content:'' ;
+        }
+
+        .especial {
+            background-color: rgb(137, 235, 230);
+        }
+
+        .especial::before {      /* before é uma Pseudo-elemento ele adiciona coisas ates de um conteúdo de uma tag */
+            content: '☆';
+            color: darkred;
+        }
+
+        .especial::after {
+           content: ' ✎';
+           color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <h1>PERSONALIZANDO LINKS:</h1>
+
+    <UL>
+
+        <li><a href="https://www.todamateria.com.br/lingua-portuguesa/" target="_blank">TODA MATÉRIA (PORTUGUÊS)</a></li>
+
+        <li><a href="https://www.todamateria.com.br/matematica/" target="_blank">TODA MATÉRIA (MATEMÁTICA)</a></li>
+
+        <li><a href="https://www.todamateria.com.br/ingles/" target="_blank" class="especial">TODA MATÉRIA (INGLÊS)</a></li>
+
+    </UL>
+
+
+    <h3><a id="dois"  href="https://erikasarti.com/html/dingbats-simbolos-desenhos/" target="_blank">https://erikasarti.com/html/dingbats-simbolos-desenhos/</a></h3>
+    
+</body>
+</html>

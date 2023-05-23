@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAP15 AULA3</title>
+
+    <style>
+
+        div {
+            color: indigo;
+            font: normal 22pt arial;
+            margin-top: 25px;
+        }
+
+        div#d4 {
+            color: indigo;
+            font: normal 22pt arial;
+            background-color: rgb(181, 241, 190); 
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            border: 5px solid black;
+            line-height: 100px;
+        }
+
+        div > p {
+            background-color: crimson;
+            display: none;
+            color: beige;
+
+        }
+        div:hover > p {
+            background-color: crimson;
+            display: block;
+
+        }
+        div:hover{
+            color: rgb(255, 132, 0);
+
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="d1">passe o mouse  na palavra de baixo</div>
+    <div id="d2">passe o mouse aqui
+        <p>palavra escondida...</p>
+
+    </div>
+    <div id="d3">fim da exibição!</div>
+
+    <div id="d4">1    <p>um</p>  </div>
+    <div id="d4">2    <p>dois</p>   </div>
+    <div id="d4">3    <p>três</p> </div>
+    
+    
+</body>
+</html>
